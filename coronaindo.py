@@ -1,6 +1,6 @@
 import requests,re
 reqlist = requests.get('https://api.kawalcorona.com/indonesia/provinsi').json()
-cari = input("masukkan nama negara : ")
+cari = input("masukkan nama provinsi : ")
 for x in reqlist:
 	a = re.search(cari,x['attributes']['Provinsi'].lower())
 	if a!=None:
